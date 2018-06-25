@@ -5,14 +5,21 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        int[] a = {1, 2, 3, 4, 5, 6};
-        int b[] = new int[8];
-        System.out.println(b);
-        System.out.println(Arrays.toString(b));
-        b[3] = 100;
-        System.out.println(Arrays.toString(b));
-        int[][] c = {{1,2,3,4},{5,6,7,8}};
-        System.out.println(Arrays.deepToString(c));
+        int a[] = {1, 2, 3, 4, 5, 6, 7};
+        int a1[] = {1, 2, 3};
+
+        revers(a);
+        revers(a1);
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(a1));
+    }
+
+    private static void revers(int[] a) {
+        for (int i = 0; i < a.length / 2; i++) {
+            int tmp = a[i];
+            a[i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = tmp;
+
+        }
     }
 }
